@@ -1,0 +1,103 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+@import "./custom";
+
+.app-navbar {
+    height: 64px;
+    background-color: $primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+.h-navbar {
+    height: 64px;
+}
+
+.btn-primary {
+    @include button-variant($primary, $primary, $white, $hover-color: $white, $active-color: $white);
+}
+
+.btn-outline-primary {
+    @include button-outline-variant($primary, $white, $active-color: $white);
+}
+
+// .btn-outline-secondary {
+//     @include button-outline-variant($black, color-contrast($secondary), $secondary, $secondary, color-contrast($secondary));
+//     border-color: $secondary !important;
+//     &:focus {
+//         box-shadow: 0 0 0 $btn-focus-width rgba($secondary, .5);
+//     }
+// }
+
+.nominal-btn {
+    color: $black;
+}
+
+
+
+a#heroAjukanDonasi {
+    @include button-variant($white, $primary, $black, $primary, $primary, $white, $primary-dark, $primary-dark, $white);
+}
+
+#categoryCover {
+    width: 320px; 
+    object-fit: cover; 
+    object-position: top center;
+    border-bottom-left-radius: 50px;
+}
+
+.px-28px {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(228, 228, 228);
+    }
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.pagination * {
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pagination *:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.pagination *:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.toast-success {
+    background: linear-gradient(135deg, #6eb462, #59BA47) !important;
+}
+
+.toast-error {
+    background: linear-gradient(135deg, #db606c, #dc3545) !important;
+}
+
+.toast-normal {
+    background: linear-gradient(135deg, #292929, #000000) !important;
+}
