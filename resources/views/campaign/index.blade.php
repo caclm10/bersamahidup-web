@@ -2,7 +2,8 @@
 
 @section('title', 'BersamaHidup - Daftar Galangan')
 
-@section('meta-description', "$category ? BersamaHidup - Daftar Galangan $category->nama.  $category->deskripsi" : '')
+@section('meta-description', $category ? 'BersamaHidup - Daftar Galangan ' . $category->nama . ' ' .
+    $category->deskripsi : '')
 
 @section('top')
     @if ($category)
@@ -22,7 +23,6 @@
 @section('content')
     @if ($category)
         <x-campaign.campaign-list :campaigns="$campaigns" />
-
     @else
         @if ($slug == '')
             <h2 class="mb-3">Pilih Kategori</h2>
